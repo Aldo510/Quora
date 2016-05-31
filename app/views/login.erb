@@ -1,0 +1,28 @@
+<!--Uso del helper para saber si el usuario esta registrado -->
+<% if logged_in? %>
+<!--Uso del helper para mostrar los datos del usuario logeado-->
+  
+    <h1>Bienvenido a la pagina de los logeados.<br> <%= current_user.name %></h1>
+    <center>
+        <img src="http://www.locomotion.mx/assets/codeacamp_logo-d00e28326ca4ba35c48d58af090ee7df.png"/>
+    </center>
+    <br>
+    <ul class="login">
+        <li><a class="btn" href="/logout">Cerrar sesión</a></li>
+        <br>
+        <!--Hara que se borre la cuenta del usuario-->
+        <li><a class="btn" href="/borrar_cuenta">Borrar cuenta</a></li>
+        <br>
+        <li><a class="btn" href="/datos/<%= current_user.id %>/edit">Actualizar datos</a></li>
+        <br>
+        <!--Hacer vista para las preguntas por usuario-->
+        <li><a class="btn" href="/questions/<%= current_user.id %>">Preguntas hechas por <%= current_user.name %></a></li>
+        <br>
+        <!--Hacer pregunta para las respuestas echas a este usuario-->
+        <li><a class="btn" href="/answers/<%= current_user.id %>">Respuestas hechas por <%= current_user.name %></a></li>
+        <br>
+        <li><a class="btn" href="/create_question">Crea una nueva Pregunta</a></li>
+        <li><a class="btn" href="/all_questions">Mostrar todas las preguntas</a></li>
+        
+    </ul>
+<% end %>

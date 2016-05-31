@@ -1,0 +1,11 @@
+<h2>Aquí estan todas tus respuestas</h2>
+<% if @answers_user %>
+  <% @answers_user.each do |answer| %>
+    <p>Respuesta: <br><%= answer.answer%></p>
+    <p>A la pregunta:</p>
+    <p><%= Question.find(answer.question_id).question%></p>
+    <hr>
+  <% end %>
+<% end %>
+
+<a class="btn" href="/logeado">Regresar</a>

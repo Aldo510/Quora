@@ -1,0 +1,29 @@
+<h1>Aqui estan todas las preguntas</h1>
+<% if @questions %>
+  <% @questions.each do |question| %>
+    <div class="box">
+      <p><%= User.find(question.user_id).name %> Pregunta:</p>
+      <p><%= question.question %></p>
+      
+      <hr>
+      <p>Respuestas:</p>
+      <% answers = Answer.where(question_id: question.id) %>
+      <% answers.each do |ans| %>
+
+
+        <p><%= User.find(ans.user_id).name %> Respondio:</p>
+        <li><%= ans.answer %></li>
+        <p>Likes Answer: <%= AnswerVote.find(ans.user_id).votes %></p>
+
+
+
+        <a class="btn" href="/like/answer/<%= current_user.id%>/<%= ans.id %>">Like</a>
+      <% end %>
+      <a class="btn" href="/answer_to/<%= question.id %>">Responder</a>
+    </div>
+    <!--Poner aqui todas las respuestas-->
+    <hr class="style">
+    <!--Poner lo que deje en el controller -->
+  <% end %>
+<% end %>
+<a class="btn" href="/logeado">Regresar</a>

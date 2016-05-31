@@ -1,0 +1,9 @@
+<h1>Responde la pregunta</h1>
+<center>
+  <p><%= @question.question %></p>
+</center>
+<form action="/responde_to/<%= @question.id %>" method="post">
+  <label for="fname">Escribe tu respuesta</label>
+  <input type="text" name="answer">
+  <input type="submit" value="Submit">
+</form>

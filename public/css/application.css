@@ -1,0 +1,97 @@
+body{
+ background: black;
+}
+a{
+  margin: 20px 40px;
+}
+.btn{
+  margin: 20px 40px;
+  background: #d93434;
+  background-image: -webkit-linear-gradient(top, #d93434, #b82b92);
+  background-image: -moz-linear-gradient(top, #d93434, #b82b92);
+  background-image: -ms-linear-gradient(top, #d93434, #b82b92);
+  background-image: -o-linear-gradient(top, #d93434, #b82b92);
+  background-image: linear-gradient(to bottom, #d93434, #b82b92);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover{
+  background: #fc3c3c;
+  background-image: -webkit-linear-gradient(top, #fc3c3c, #4734d9);
+  background-image: -moz-linear-gradient(top, #fc3c3c, #4734d9);
+  background-image: -ms-linear-gradient(top, #fc3c3c, #4734d9);
+  background-image: -o-linear-gradient(top, #fc3c3c, #4734d9);
+  background-image: linear-gradient(to bottom, #fc3c3c, #4734d9);
+  text-decoration: none;
+}
+li{
+  margin-bottom: 22px;
+}
+
+hr.style {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.box{
+  border: 5px dashed #0089FF;
+  margin-bottom: 40px; 
+  padding: 20px 20px;
+  border-radius: 64px;
+}
+h1
+{
+  text-shadow: 7px 0px 7px rgba(0, 0, 0, 0.76);
+  color: #0CDCDC;
+  font-size: 50px;
+  text-align: center;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  background: -webkit-linear-gradient(left top, #9067C8, #C86786); 
+  background: -o-linear-gradient(bottom right, #9067C8, #C86786; 
+  background: -moz-linear-gradient(bottom right, #9067C8, #C86786; 
+  background: linear-gradient(to bottom right, #9067C8, #C86786; 
+}
+
